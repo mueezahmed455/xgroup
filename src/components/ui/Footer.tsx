@@ -5,17 +5,14 @@ const footerLinks = {
     { label: 'Platform', href: '/platform' },
     { label: 'Pricing', href: '/#pricing' },
     { label: 'Integrations', href: '/platform' },
-    { label: 'API Docs', href: '#' },
   ],
   Company: [
     { label: 'About', href: '/about' },
-    { label: 'Careers', href: '#' },
-    { label: 'Blog', href: '#' },
     { label: 'Contact', href: '/contact' },
   ],
   Legal: [
-    { label: 'Privacy Policy', href: '#' },
-    { label: 'Terms of Service', href: '#' },
+    { label: 'Privacy', href: '#' },
+    { label: 'Terms', href: '#' },
     { label: 'Security', href: '#' },
   ],
 }
@@ -30,13 +27,9 @@ export default function Footer() {
               <span className="font-display text-xl font-bold text-[var(--accent-primary)]">X.Group</span>
             </Link>
             <p className="mt-4 font-mono text-xs text-[var(--text-muted)] leading-relaxed max-w-xs">
-              Enterprise automation infrastructure for businesses that refuse to stand still.
+              A London startup building the operating layer for growing firms —
+              workflows, clients, and compliance in one control plane.
             </p>
-            <div className="mt-6 flex gap-4">
-              {['LinkedIn', 'GitHub', 'Twitter'].map((social) => (
-                <a key={social} href="#" className="font-mono text-xs text-[var(--text-muted)] hover:text-[var(--accent-primary)] transition-colors" aria-label={social}>{social}</a>
-              ))}
-            </div>
           </div>
           {Object.entries(footerLinks).map(([category, links]) => (
             <div key={category}>
@@ -53,8 +46,8 @@ export default function Footer() {
         </div>
         <div className="glow-line" />
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="font-mono text-xs text-[var(--text-muted)]">&copy; 2025 X.Group International Ltd. All rights reserved.</p>
-          <p className="font-mono text-xs text-[var(--text-muted)]">Registered in England &amp; Wales</p>
+          <p className="font-mono text-xs text-[var(--text-muted)]">&copy; {new Date().getFullYear()} X.Group International Ltd. All rights reserved.</p>
+          <p className="font-mono text-xs text-[var(--text-muted)]">Registered in England &amp; Wales · Company 14182930</p>
         </div>
       </div>
     </footer>

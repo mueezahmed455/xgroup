@@ -9,25 +9,25 @@ const steps = [
     number: '01',
     title: 'Connect',
     description:
-      'Plug in your existing tools, APIs, and data sources. Our connector library supports 200+ integrations out of the box.',
+      'Plug in the systems you already run. ERP, CRM, warehouse, ledger, messaging. The fabric speaks their language on day one.',
   },
   {
     number: '02',
-    title: 'Configure',
+    title: 'Compose',
     description:
-      'Design automation workflows with our visual builder. Set triggers, conditions, and actions — no engineering degree required.',
+      'Draw the path a job should take. Conditions, human approvals, compensating actions. The engine stores it as a durable graph.',
   },
   {
     number: '03',
-    title: 'Automate',
+    title: 'Run',
     description:
-      'Deploy workflows across your organisation. Real-time monitoring, error handling, and automatic retries built in.',
+      'Deploy across tenants. Retries, idempotency, and dead-letter handling are defaults — not plugins you remember later.',
   },
   {
     number: '04',
-    title: 'Scale',
+    title: 'Prove',
     description:
-      'Expand across tenants, regions, and teams. Our infrastructure scales elastically — you pay only for what you use.',
+      'Every execution is attributable. Audit trails, cost per tenant, and SLOs your board can read without a decoder ring.',
   },
 ]
 
@@ -69,10 +69,11 @@ export default function HowItWorks() {
           transition={{ duration: 0.6 }}
         >
           <span className="font-mono text-xs uppercase tracking-widest text-[var(--accent-primary)] mb-4 block">
-            The Engine
+            How it works
           </span>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold">
-            How It <span className="text-[var(--accent-primary)]">Works</span>
+            Live in four steps, not a{' '}
+            <span className="text-[var(--accent-primary)]">six-month programme.</span>
           </h2>
         </motion.div>
       </div>

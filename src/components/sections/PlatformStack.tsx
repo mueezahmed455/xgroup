@@ -6,40 +6,40 @@ import type { PlatformFeature } from '@/types'
 
 const features: PlatformFeature[] = [
   {
-    title: 'Workflow Automation',
+    title: 'Workflow engine',
     description:
-      'Design and deploy complex multi-step workflows with a visual builder that scales across your entire organisation.',
-    icon: '\u26a1',
+      'Design multi-step automations with branching, retries, and parallel workers. Visual when you want it. Code when you need it.',
+    icon: '01',
   },
   {
-    title: 'Multi-Tenant Architecture',
+    title: 'Multi-tenant isolation',
     description:
-      'Complete data isolation per client. Each tenant operates in its own secure partition with zero cross-contamination.',
-    icon: '\ud83c\udfd7\ufe0f',
+      'Every client runs in a sealed partition. Data, compute, and logs never cross a tenant boundary — by construction.',
+    icon: '02',
   },
   {
-    title: 'Real-Time Analytics',
+    title: 'Real-time control plane',
     description:
-      'Live dashboards with sub-second latency. Monitor throughput, error rates, and cost optimisation in real time.',
-    icon: '\ud83d\udcca',
+      'Sub-second dashboards for throughput, error budget, and cost. Spot a bottleneck before it becomes an outage.',
+    icon: '03',
   },
   {
-    title: 'API Integrations',
+    title: 'Integration fabric',
     description:
       'Pre-built connectors for 200+ services. REST, GraphQL, webhooks — connect anything in minutes.',
-    icon: '\ud83d\udd17',
+    icon: '04',
   },
   {
-    title: 'Client Portals',
+    title: 'Client portals',
     description:
       'White-label dashboards for your clients. Self-service controls, billing, and real-time status visibility.',
-    icon: '\ud83d\udee1\ufe0f',
+    icon: '05',
   },
   {
-    title: 'AI-Powered Triggers',
+    title: 'Adaptive triggers',
     description:
-      'Intelligent event detection that adapts to patterns. Anomaly detection, predictive scaling, and smart routing.',
-    icon: '\ud83e\udde0',
+      'Pattern-aware event detection, anomaly routing, and predictive scale-out so workflows fire on signal — not on a timer.',
+    icon: '06',
   },
 ]
 
@@ -48,20 +48,22 @@ export default function PlatformStack() {
     <section className="relative py-24 md:py-32">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
-          className="text-center mb-16"
+          className="mb-16 max-w-3xl"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.6 }}
         >
           <span className="font-mono text-xs uppercase tracking-widest text-[var(--accent-primary)] mb-4 block">
-            The Stack
+            Product
           </span>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold">
-            Built for <span className="text-[var(--accent-primary)]">Scale</span>
+            One system for how the company{' '}
+            <span className="text-[var(--accent-primary)]">actually runs.</span>
           </h2>
-          <p className="font-body text-lg text-[var(--text-secondary)] mt-6 max-w-2xl mx-auto">
-            Every component engineered for reliability, performance, and enterprise-grade security.
+          <p className="font-body text-lg text-[var(--text-secondary)] mt-6 max-w-xl">
+            Workflows, tenants, and proof — so operations can scale like a product,
+            not like a headcount plan.
           </p>
         </motion.div>
 
@@ -75,7 +77,7 @@ export default function PlatformStack() {
               transition={{ duration: 0.5, delay: i * 0.1 }}
             >
               <Card className="h-full">
-                <div className="text-3xl mb-4">{feature.icon}</div>
+                <div className="font-mono text-xs text-[var(--text-muted)] mb-4">{feature.icon}</div>
                 <h3 className="font-display text-lg font-bold mb-3">{feature.title}</h3>
                 <p className="font-mono text-xs text-[var(--text-secondary)] leading-relaxed">
                   {feature.description}

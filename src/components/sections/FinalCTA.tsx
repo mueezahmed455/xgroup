@@ -13,6 +13,14 @@ export default function FinalCTA() {
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
+        <motion.p
+          className="font-mono text-xs uppercase tracking-widest text-[var(--accent-primary)] mb-4"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+        >
+          Get started
+        </motion.p>
         <motion.h2
           className="font-display text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-8"
           initial={{ opacity: 0, y: 30 }}
@@ -20,8 +28,8 @@ export default function FinalCTA() {
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.6 }}
         >
-          Your Competitors Are{' '}
-          <span className="text-[var(--accent-primary)]">Already Automating.</span>
+          Ready when your next process still lives in a{' '}
+          <span className="text-[var(--accent-primary)]">spreadsheet.</span>
         </motion.h2>
 
         <motion.p
@@ -31,7 +39,8 @@ export default function FinalCTA() {
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          Join the businesses that have already eliminated manual overhead and scaled their operations with X.Group.
+          Forty minutes. We map the work, the client boundary, and the right plan.
+          No pitch deck.
         </motion.p>
 
         <motion.div
@@ -41,7 +50,7 @@ export default function FinalCTA() {
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           <Link href="/contact">
-            <Button variant="primary">Get Started with X.Group</Button>
+            <Button variant="primary">Talk to the team</Button>
           </Link>
         </motion.div>
       </div>

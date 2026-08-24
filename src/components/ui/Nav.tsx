@@ -6,8 +6,9 @@ import { motion, AnimatePresence } from 'framer-motion'
 import Button from './Button'
 
 const navLinks = [
-  { href: '/platform', label: 'Platform' },
-  { href: '/about', label: 'About' },
+  { href: '/platform', label: 'Product' },
+  { href: '/about', label: 'Company' },
+  { href: '/#pricing', label: 'Pricing' },
   { href: '/contact', label: 'Contact' },
 ]
 
@@ -38,13 +39,12 @@ export default function Nav() {
         <Link href="/" className="flex items-center gap-2">
           <span className="font-display text-xl font-bold text-[var(--accent-primary)]">
             X.Group
-n          </span>
+          </span>
           <span className="font-mono text-xs text-[var(--text-muted)] hidden sm:inline">
             International
           </span>
         </Link>
 
-        {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <Link
@@ -57,12 +57,11 @@ n          </span>
           ))}
           <Link href="/contact">
             <Button variant="primary" className="py-2 px-5 text-xs">
-              Book a Demo
+              Get started
             </Button>
           </Link>
         </div>
 
-        {/* Mobile hamburger */}
         <button
           className="md:hidden flex flex-col gap-1.5 w-8 h-8 items-center justify-center"
           onClick={() => setMobileOpen(!mobileOpen)}
@@ -83,7 +82,6 @@ n          </span>
         </button>
       </div>
 
-      {/* Mobile menu */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
@@ -106,7 +104,7 @@ n          </span>
               ))}
               <Link href="/contact" onClick={() => setMobileOpen(false)}>
                 <Button variant="primary" className="w-full py-3 text-xs">
-                  Book a Demo
+                  Get started
                 </Button>
               </Link>
             </div>

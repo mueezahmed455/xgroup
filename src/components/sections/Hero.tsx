@@ -60,29 +60,32 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[var(--bg-base)]" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+        <p className="font-mono text-xs uppercase tracking-widest text-[var(--text-muted)] mb-6">
+          London · Automation for growing firms
+        </p>
         <h1
           ref={headingRef}
           className="font-display text-5xl md:text-7xl lg:text-8xl font-bold leading-[0.95] tracking-tight mb-8"
         >
-          Automate Everything.
+          The operating layer
           <br />
-          <span className="text-[var(--accent-primary)]">Scale Without Limits.</span>
+          <span className="text-[var(--accent-primary)]">for your company.</span>
         </h1>
 
         <p
           ref={subRef}
           className="font-body text-lg md:text-xl text-[var(--text-secondary)] max-w-2xl mx-auto mb-12 leading-relaxed"
         >
-          X.Group International — enterprise automation infrastructure for businesses
-          that can&apos;t afford to stand still.
+          X.Group replaces the spreadsheet, the inbox, and the night shift with one
+          control plane — isolated, observable, and ready for clients.
         </p>
 
         <div ref={ctaRef} className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link href="/contact">
-            <Button variant="primary">Book a Demo</Button>
+            <Button variant="primary">Get started</Button>
           </Link>
           <Link href="/platform">
-            <Button variant="ghost">View Platform</Button>
+            <Button variant="ghost">See the product</Button>
           </Link>
         </div>
       </div>

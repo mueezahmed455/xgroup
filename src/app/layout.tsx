@@ -25,21 +25,22 @@ const instrumentSerif = Instrument_Serif({
 })
 
 export const metadata: Metadata = {
-  title: 'X.Group International - Enterprise Automation Infrastructure',
+  title: 'X.Group — The operating layer for growing firms',
   description:
-    'Enterprise automation infrastructure for businesses that cannot afford to stand still.',
+    'X.Group is a London startup building the operating layer for growing firms. Workflows, clients, and compliance in one control plane.',
   openGraph: {
-    title: 'X.Group International - Enterprise Automation Infrastructure',
-    description: 'Enterprise automation infrastructure for businesses that cannot afford to stand still.',
+    title: 'X.Group — The operating layer for growing firms',
+    description:
+      'X.Group is a London startup building the operating layer for growing firms. Workflows, clients, and compliance in one control plane.',
     url: process.env.NEXT_PUBLIC_SITE_URL || 'https://xgroup.io',
-    siteName: 'X.Group International',
+    siteName: 'X.Group',
     locale: 'en_GB',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'X.Group International',
-    description: 'Enterprise automation infrastructure.',
+    title: 'X.Group',
+    description: 'The operating layer for growing firms.',
   },
   robots: { index: true, follow: true },
 }
